@@ -12,7 +12,7 @@
 
 <div class="contenedor"> 
 
-    <h2>
+    <h2 style="color:lightgreen;">
         usuario
     </h2>
     <form method="POST">
@@ -23,12 +23,18 @@
     </form>
 
     <table>
+        <tr><th>id</th><th>nombre usuario</th><th>correo usuario</th><th>acciones</th></tr>
+        {% for persona in usuarios  %}
+        <tr>
+            <td>{{ persona.id }}</td>
+            <td>{{ persona.nombre }}</td>
+            <td>{{ persona.correo }}</td>
+            <td><a href="/?eliminar={{ persona.id }}">eliminar</a></td>
+            
+        </tr>    
 
 
-
-
-
-
+        {% endfor %}
     </table>
 
 
