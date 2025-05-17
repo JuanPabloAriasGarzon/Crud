@@ -16,8 +16,8 @@
         usuario
     </h2>
     <form method="POST">
-        <input type="text" placeholder="Ingrese su nombre" name="nombre"></input>
-        <input type="email" placeholder="Ingrese su email" name="correo"></input>
+        <input type="text" placeholder="Ingrese su nombre" name="nombre" required>
+        <input type="email" placeholder="Ingrese su email" name="correo" required>
 
         <button>registrar</button>
     </form>
@@ -29,7 +29,12 @@
             <td>{{ persona.id }}</td>
             <td>{{ persona.nombre }}</td>
             <td>{{ persona.correo }}</td>
-            <td><a href="/?eliminar={{ persona.id }}">eliminar</a></td>
+            <td>
+                <a href="/?editar={{ persona.id }}">editar</a>
+                |
+                <a href="/?eliminar={{ persona.id }}">eliminar</a>
+
+            </td>
             
         </tr>    
 
